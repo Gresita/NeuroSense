@@ -21,7 +21,7 @@ Before running the project, make sure you have installed:
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Gresita/NeuroSense.git
 cd NeuroSense
 ```
 
@@ -51,6 +51,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+The required libraries include:
+
+- PyTorch
+- Scikit-learn
+- XGBoost
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Plotly
+- Streamlit
 
 ---
 
@@ -172,6 +183,7 @@ The dashboard provides interactive visualizations and analysis of the models, da
 - XGBoost
 - PyTorch
 - Streamlit
+- Plotly
 - Matplotlib
 - Seaborn
 - Jupyter Notebook
@@ -180,7 +192,8 @@ The dashboard provides interactive visualizations and analysis of the models, da
 
 ## Authors
 
-NeuroSense Project
+Gresa Makiqi  
+Erris Binxhija
 
 Faculty of Computer Science and Engineering  
 UBT – University for Business and Technology
