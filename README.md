@@ -1,139 +1,186 @@
-# NeuroSense: Emotion Recognition using EEG and Eye Tracking Data
+# NeuroSense
 
-## Project Overview
+NeuroSense is a machine learning and deep learning project for emotion recognition using EEG and Eye-Tracking data from the SEED-IV dataset.
 
-NeuroSense is a machine learning project focused on emotion recognition using multimodal physiological signals. The system analyzes EEG (Electroencephalography) and Eye Tracking features to classify emotional states.
-
-The project was developed as part of the Machine Learning Models course and includes data preprocessing, feature engineering, classification, clustering, evaluation, and an interactive dashboard for emotion analysis.
+The project explores different approaches for emotion classification and clustering, including traditional machine learning algorithms, neural networks, and deep learning architectures.
 
 ---
 
-## Dataset
+## Prerequisites
 
-Dataset: SEED-IV
+Before running the project, make sure you have installed:
 
-Features:
-
-* 310 EEG features
-* 31 Eye Tracking features
-* 14 Engineered features
-
-Total features: 355
-
-Classes:
-
-* Neutral
-* Negative
-* Positive
-
-Dataset size:
-
-* 37,575 samples
-
----
-
-## Project Structure
-
-data/
-
-* neurosense_cleaned.csv
-
-classification/
-
-* KNN
-* Decision Tree
-* Logistic Regression
-* MLP Neural Network
-* Random Forest
-* Extra Trees
-
-clustering/
-
-* K-Means
-* DBSCAN
-* Agglomerative Clustering
-
-dashboard/
-
-* Live_Dashboard.py
-* pages/Emotion_Analyzer.py
-* models/random_forest_3class.pkl
-
-results/
-
-* evaluation metrics
-* confusion matrices
-* visualizations
-
----
-
-## Machine Learning Models
-
-Classification algorithms:
-
-* K-Nearest Neighbors (KNN)
-* Decision Tree
-* Logistic Regression
-* Multi-Layer Perceptron (MLP)
-* Random Forest
-* Extra Trees
-
-Best performing model:
-
-Random Forest
-
-Performance:
-
-* Accuracy: 57.25%
-* F1-score: 55.86%
-
----
-
-## Clustering Algorithms
-
-* K-Means
-* DBSCAN
-* Agglomerative Clustering
-
-Evaluation metrics:
-
-* Silhouette Score
-* Adjusted Rand Index (ARI)
-* Normalized Mutual Information (NMI)
-
----
-
-## Dashboard
-
-The project includes an interactive Streamlit dashboard with:
-
-* Live Emotion Dashboard
-* Emotion Timeline Visualization
-* Emotion Distribution Analysis
-* Confidence Analysis
-* Emotion Analyzer Page
-* Real-time Prediction using the trained Random Forest model
+- Python 3.10 or higher
+- Jupyter Notebook
+- Git
 
 ---
 
 ## Installation
 
-Install dependencies:
+### 1. Clone the repository
 
+```bash
+git clone <repository-url>
+cd NeuroSense
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+#### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+#### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+### 4. Install required packages
+
+```bash
 pip install -r requirements.txt
+```
+
+
+---
+
+## Running the Project
+
+The notebooks should be executed in the following order:
+
+### 1. Data Preprocessing
+
+Run:
+
+```text
+preprocessing.ipynb
+```
+
+This notebook performs:
+
+- Data cleaning
+- Missing value analysis
+- Outlier analysis
+- Data scaling and normalization
+
+---
+
+### 2. Feature Engineering
+
+Run:
+
+```text
+feature_engineering.ipynb
+```
+
+This notebook generates additional statistical features from EEG and Eye-Tracking signals.
+
+---
+
+### 3. Data Visualization
+
+Run:
+
+```text
+visualization.ipynb
+```
+
+This notebook contains exploratory data analysis and visualizations used throughout the project.
+
+---
+
+### 4. Classification Models
+
+Navigate to the classification folder and execute the notebooks individually.
+
+Implemented models:
+
+- K-Nearest Neighbors (KNN)
+- Decision Tree
+- Support Vector Machine (SVM)
+- Random Forest
+- XGBoost
+- Multi-Layer Perceptron (MLP)
+- CNN-BiLSTM
+
+---
+
+### 5. Clustering
+
+Run:
+
+```text
+clustering.ipynb
+```
+
+Implemented clustering algorithms:
+
+- K-Means
+- DBSCAN
+- Agglomerative Clustering
+
+---
+
+### 6. Final Model Comparison
+
+Run:
+
+```text
+classification/final_model_comparison.ipynb
+```
+
+This notebook generates comparative visualizations and performance rankings for all implemented classification models.
 
 ---
 
 ## Running the Dashboard
 
-Run:
+The project includes an interactive dashboard built with Streamlit.
 
+From the root project directory run:
+
+```bash
 streamlit run dashboard/Live_Dashboard.py
+```
+
+After the application starts, open the URL displayed in the terminal (typically):
+
+```text
+http://localhost:8501
+```
+
+The dashboard provides interactive visualizations and analysis of the models, datasets, and experimental results generated throughout the project.
+
+---
+
+## Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- PyTorch
+- Streamlit
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
 ---
 
 ## Authors
 
-NeuroSense Project Team
+NeuroSense Project
 
-UBT – Computer Science and Engineering
+Faculty of Computer Science and Engineering  
+UBT – University for Business and Technology
